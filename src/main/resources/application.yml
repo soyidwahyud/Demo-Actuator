@@ -1,0 +1,51 @@
+server:
+  servlet:
+      context-path: /api/prod
+spring:
+    application:
+        name: Demo-Actuator
+    jpa:
+      defer-datasource-initialization: true
+
+#    data:
+#        mongodb:
+#            uri: mongodb://localhost:27017/rumah-payment-indonesia-db
+#            database: rumah-payment-indonesia-db
+#            port: 27017
+    datasource:
+      driver-class-name: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/danamon
+      username: postgres
+      password: wahyu
+#    jpa:
+#      database: POSTGRESQL
+#      generate-ddl: false
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.PostgreSQLDialect
+
+#management:
+#    endpoint:
+#      health:
+#          show-details: always
+#    health:
+#        mongo:
+#            enabled: true
+#        db:
+#          enabled: true
+
+management:
+  security:
+    enabled: true
+  endpoint:
+    health:
+      show-details: always
+  health:
+    diskspace:
+      enabled: false
+    redis:
+      enabled: true
+    db:
+      enabled: true
+    mongo:
+      enabled: true
