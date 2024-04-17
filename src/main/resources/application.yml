@@ -6,17 +6,15 @@ spring:
         name: Demo-Actuator
     jpa:
       defer-datasource-initialization: true
+      hibernate:
+        ddl-auto: update
 
-#    data:
-#        mongodb:
-#            uri: mongodb://localhost:27017/rumah-payment-indonesia-db
-#            database: rumah-payment-indonesia-db
-#            port: 27017
     datasource:
       driver-class-name: org.postgresql.Driver
       url: jdbc:postgresql://localhost:5432/danamon
       username: postgres
       password: wahyu
+
 #    jpa:
 #      database: POSTGRESQL
 #      generate-ddl: false
