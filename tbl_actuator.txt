@@ -1,0 +1,17 @@
+-- auto-generated definition
+create table tbl_actuator
+(
+    id                varchar(36) not null
+        constraint tbl_actuator_pk
+            primary key,
+    created_dt        timestamp with time zone,
+    db_status         varchar(10),
+    mongo_status      varchar(10),
+    redis_status      varchar(10),
+    ping_status       varchar(10),
+    actuator_response varchar(255)
+);
+
+alter table tbl_actuator
+    owner to postgres;
+
